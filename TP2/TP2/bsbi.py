@@ -355,7 +355,7 @@ class BSBIIndex:
         Melakukan Ranked Retrieval dengan skema TaaT (Term-at-a-Time).
         Method akan mengembalikan top-K retrieval results.
 
-        w(t, D) = (1 + log tf(t, D))       jika tf(t, D) > 0
+        w(t, D) = 0.5+(0.5*tf(t,D)/max_tf)       jika tf(t, D) > 0
                 = 0                        jika sebaliknya
 
         w(t, Q) = IDF = log (N / df(t))
@@ -434,7 +434,7 @@ class BSBIIndex:
         Melakukan Ranked Retrieval dengan skema TaaT (Term-at-a-Time).
         Method akan mengembalikan top-K retrieval results.
 
-        w(t, D) = (1 + log tf(t, D))       jika tf(t, D) > 0
+        w(t, D) = 1       jika tf(t, D) > 0
                 = 0                        jika sebaliknya
 
         w(t, Q) = IDF = log (N / df(t))
