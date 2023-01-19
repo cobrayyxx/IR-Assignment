@@ -17,17 +17,17 @@ for query in queries:
     print("===========TF-IDF ltn==============")
     for (score, doc) in BSBI_instance.retrieve_tfidf(query, k = 10):
         print(f"{doc:30} {score:>.3f}")
-    print("===========TF-IDF atn==============")
-    for (score, doc) in BSBI_instance.retrieve_tfidf_var_atn(query, k = 10):
-        print(f"{doc:30} {score:>.3f}")
-    print("===========TF-IDF ntn==============")
-    for (score, doc) in BSBI_instance.retrieve_tfidf_var_ntn(query, k = 10):
-        print(f"{doc:30} {score:>.3f}")
-    print("===========TF-IDF btn==============")
-    for (score, doc) in BSBI_instance.retrieve_tfidf_var_btn(query, k = 10):
-        print(f"{doc:30} {score:>.3f}")
-    print("===========BM25==============")
-    for (score, doc) in BSBI_instance.retrieve_bm25(query, k = 10):
-        print(f"{doc:30} {score:>.3f}")
+    # print("===========TF-IDF atn==============")
+    # for (score, doc) in BSBI_instance.retrieve_tfidf_var_atn(query, k = 10):
+    #     print(f"{doc:30} {score:>.3f}")
+    # print("===========TF-IDF ntn==============")
+    # for (score, doc) in BSBI_instance.retrieve_tfidf_var_ntn(query, k = 10):
+    #     print(f"{doc:30} {score:>.3f}")
+    # print("===========TF-IDF btn==============")
+    # for (score, doc) in BSBI_instance.retrieve_tfidf_var_btn(query, k = 10):
+    #     print(f"{doc:30} {score:>.3f}")
+    # print("===========BM25==============")
+    # for (score, doc) in BSBI_instance.retrieve_bm25(query, k = 10):
+    #     print(f"{doc:30} {score:>.3f}")
     
-    print()
+    # print()

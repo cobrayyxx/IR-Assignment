@@ -1,0 +1,164 @@
+*Note: untuk implementasi letor terbaru terdapat pada XGB_letor.py, dari file tersebut saya mengubah-ubah model dari word embeddingnya dan 
+parameter pada XGBoostRanker. Kemudian,
+
+Dari hasil dibawah didapat bahwa hasil Letor dari model ranker XGBoost baik dengan model EnsembleLDA atau LSA, memiliki hasil yang lebih baik
+daripada model ranker LGBM. Hal ini karena XGB merupakan algoritma yang melakukan boosting terhadap pencarian gradien sehingga hal tersebut membuat
+XGB menjadi algoritmanya lebih cepat dan performancenya lebih tinggi. Selain itu, konsep kerja boosting adalah membuat model yang efektif
+dengan menggabungkan model-model yang lemah. Hal tersebut juga merupakan salah satu alasan mengapa XGB memiliki score yang lebih tinggi dibanding
+dengan LGBM. 
+
+Kemudian pada percobaan dibawah saya menggunakan model LSI dan model EnsembleLDA untuk diganbungkan dengan XGBoostRanker. Dari hasil score 
+yang ada bisa dilihat bahwa terdapat beberapa dokumen yang scorenya lebih tinggi menggunakan LSI dan ada juga yang scorenya lebih tinggi
+saat menggunakan EnsembleLDA. Tapi secara keseluruhan LETOR yang menggunakan LSI+XGBoostRanker memiliki score yang lebih tinggi dibanding
+dengan LSI+EnsembleLDA. LSI sendiri adalah model yang digunakan untuk memetakan dari term-doc ke vector menggunakan truncated SVD. Definisi
+dari LDA pun juga kurang lebih sama seperti LSI, tapi perbedaannya adalah LDA fokus untuk mencari topik dari suatu dokumen berdasarkan kata-kata
+yang ada di dokumen tersebut sedangkan LSI fokus untuk mengurangi dimensi matrix. Kedua model ini sukses untuk menaikkan score jika 
+di-combine dengan XGBoostRanker.
+
+query        : alkylated with radioactive iodoacetate
+SERP/Ranking :
+=========================LETOR LGBM==========================
+collection\6\507.txt           1.035
+collection\2\119.txt           0.950
+collection\11\1003.txt         0.483
+collection\6\554.txt           0.009
+collection\6\512.txt           0.006
+collection\6\506.txt           -0.054
+collection\4\388.txt           -0.069
+collection\10\989.txt          -0.337
+collection\5\482.txt           -1.073
+collection\4\387.txt           -1.115
+
+query        : alkylated with radioactive iodoacetate
+SERP/Ranking :
+=========================LETOR XGBoost + EnsembleLDA Model===========================
+collection\6\507.txt           2.334
+collection\2\119.txt           1.774
+collection\6\512.txt           0.714
+collection\11\1003.txt         0.655
+collection\6\506.txt           0.540
+collection\6\554.txt           0.349
+collection\4\388.txt           0.349
+collection\10\989.txt          0.179
+collection\5\482.txt           -0.031
+collection\4\387.txt           -0.320
+
+query        : alkylated with radioactive iodoacetate
+SERP/Ranking :
+=========================LETOR XGBoost + LSA Model===========================
+collection\6\507.txt           2.333
+collection\2\119.txt           1.778
+collection\6\554.txt           0.933
+collection\11\1003.txt         0.905
+collection\4\388.txt           0.641
+collection\6\512.txt           0.598
+collection\6\506.txt           0.471
+collection\10\989.txt          -0.083
+collection\5\482.txt           -0.105
+collection\4\387.txt           -0.290
+
+===================================================================
+===================================================================
+===================================================================
+
+query        : psychodrama for disturbed children
+SERP/Ranking :
+=========================LETOR LGBM==========================
+collection\9\820.txt           1.364
+collection\1\36.txt            1.135
+collection\9\821.txt           1.040
+collection\1\99.txt            0.480
+collection\3\205.txt           0.391
+collection\10\918.txt          0.388
+collection\8\799.txt           0.338
+collection\9\817.txt           0.323
+collection\2\100.txt           0.066
+collection\3\204.txt           -0.930
+
+query        : psychodrama for disturbed children
+SERP/Ranking :
+=========================LETOR XGBoost + EnsembleLDA Model===========================
+collection\9\820.txt           2.560
+collection\1\36.txt            1.949
+collection\9\821.txt           1.509
+collection\2\100.txt           0.900
+collection\1\99.txt            0.851
+collection\8\799.txt           0.768
+collection\9\817.txt           0.695
+collection\3\205.txt           0.663
+collection\10\918.txt          0.602
+collection\3\204.txt           -0.023
+
+query        : psychodrama for disturbed children
+SERP/Ranking :
+=========================LETOR XGBoost + LSA Model===========================
+collection\9\820.txt           2.734
+collection\1\36.txt            2.366
+collection\9\821.txt           2.115
+collection\8\799.txt           1.600
+collection\9\817.txt           1.599
+collection\10\918.txt          1.574
+collection\3\205.txt           1.524
+collection\1\99.txt            1.173
+collection\2\100.txt           1.092
+collection\3\204.txt           -0.369
+
+
+===================================================================
+===================================================================
+===================================================================
+
+query        : lipid metabolism in toxemia and normal pregnancy
+SERP/Ranking :
+=========================LETOR LGBM==========================
+collection\1\7.txt             1.627
+collection\4\371.txt           1.313
+collection\1\81.txt            1.018
+collection\4\328.txt           0.990
+collection\1\12.txt            0.864
+collection\2\159.txt           0.851
+collection\3\201.txt           0.730
+collection\3\288.txt           0.701
+collection\4\306.txt           0.687
+collection\4\329.txt           0.599
+
+query        : lipid metabolism in toxemia and normal pregnancy
+SERP/Ranking :
+=========================LETOR XGBoost + EnsembleLDA Model===========================
+collection\4\371.txt           3.570
+collection\1\7.txt             3.522
+collection\4\328.txt           2.368
+collection\2\159.txt           2.125
+collection\1\81.txt            1.797
+collection\1\12.txt            1.740
+collection\3\201.txt           1.532
+collection\4\306.txt           1.411
+collection\3\288.txt           1.411
+collection\4\329.txt           1.047
+
+query        : lipid metabolism in toxemia and normal pregnancy
+SERP/Ranking :
+=========================LETOR XGBoost + LSA Model===========================
+collection\1\7.txt             3.275
+collection\1\81.txt            2.886
+collection\4\371.txt           2.732
+collection\4\328.txt           2.477
+collection\1\12.txt            2.433
+collection\3\288.txt           2.238
+collection\2\159.txt           2.182
+collection\4\306.txt           2.142
+collection\3\201.txt           2.043
+collection\4\329.txt           1.599
+
+===================================================================
+===================================================================
+===================================================================
+
+src:
+https://medium.com/predictly-on-tech/learning-to-rank-using-xgboost-83de0166229d
+Wicaksono, Alfan F.2022.Learning-To-Rank(Slide perkuliahan). Fasilkom,Universitas Indonesia.
+Wicaksono, Alfan F.2022.Word Embeddings(Slide perkuliahan). Fasilkom,Universitas Indonesia.
+https://xgboost.readthedocs.io/en/stable/index.html
+https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine-learning/
+https://towardsdatascience.com/2-latent-methods-for-dimension-reduction-and-topic-modeling-20ff6d7d547#:~:text=LSA%20focus%20on%20reducing%20matrix%20dimension%20while%20LDA%20solves%20topic%20modeling%20problems.
+https://towardsdatascience.com/latent-dirichlet-allocation-lda-9d1cd064ffa2

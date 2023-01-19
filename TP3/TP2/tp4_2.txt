@@ -1,0 +1,116 @@
+query        : alkylated with radioactive iodoacetate
+SERP/Ranking :
+=========================LETOR LGBM==========================
+collection\2\119.txt           0.983
+collection\6\507.txt           0.973
+collection\11\1003.txt         0.469
+collection\6\554.txt           0.099
+collection\6\512.txt           -0.077
+collection\4\388.txt           -0.176
+collection\10\989.txt          -0.194
+collection\6\506.txt           -0.244
+collection\5\482.txt           -0.863
+collection\4\387.txt           -1.084
+
+
+
+
+
+query        : alkylated with radioactive iodoacetate
+SERP/Ranking :
+=========================LETOR XGBoost + LSA Model===========================
+collection\6\507.txt           2.333
+collection\2\119.txt           1.778
+collection\6\554.txt           0.933
+collection\11\1003.txt         0.905
+collection\4\388.txt           0.641
+collection\6\512.txt           0.598
+collection\6\506.txt           0.471
+collection\10\989.txt          -0.083
+collection\5\482.txt           -0.105
+collection\4\387.txt           -0.290
+
+
+
+===================================================================
+===================================================================
+===================================================================
+
+
+
+query        : psychodrama for disturbed children
+SERP/Ranking :
+=========================LETOR LGBM==========================
+collection\9\820.txt           1.223
+collection\1\36.txt            1.162
+collection\9\821.txt           0.998
+collection\3\205.txt           0.505
+collection\9\817.txt           0.455
+collection\8\799.txt           0.393
+collection\1\99.txt            0.386
+collection\10\918.txt          0.362
+collection\2\100.txt           -0.039
+collection\3\204.txt           -1.003
+
+
+
+
+
+query        : psychodrama for disturbed children
+SERP/Ranking :
+=========================LETOR XGBoost + LSA Model===========================
+collection\9\820.txt           2.734
+collection\1\36.txt            2.366
+collection\9\821.txt           2.115
+collection\8\799.txt           1.600
+collection\9\817.txt           1.599
+collection\10\918.txt          1.574
+collection\3\205.txt           1.524
+collection\1\99.txt            1.173
+collection\2\100.txt           1.092
+collection\3\204.txt           -0.369
+
+
+
+===================================================================
+===================================================================
+===================================================================
+
+query        : lipid metabolism in toxemia and normal pregnancy
+SERP/Ranking :
+=========================LETOR LGBM==========================
+collection\1\7.txt             1.609
+collection\4\371.txt           1.507
+collection\4\328.txt           1.185
+collection\1\12.txt            1.007
+collection\1\81.txt            0.994
+collection\2\159.txt           0.961
+collection\3\201.txt           0.865
+collection\4\306.txt           0.856
+collection\4\329.txt           0.708
+collection\3\288.txt           0.706
+
+
+
+
+
+query        : lipid metabolism in toxemia and normal pregnancy
+SERP/Ranking :
+=========================LETOR XGBoost + LSA Model===========================
+collection\1\7.txt             3.275
+collection\1\81.txt            2.886
+collection\4\371.txt           2.732
+collection\4\328.txt           2.477
+collection\1\12.txt            2.433
+collection\3\288.txt           2.238
+collection\2\159.txt           2.182
+collection\4\306.txt           2.142
+collection\3\201.txt           2.043
+collection\4\329.txt           1.599
+
+
+
+===================================================================
+===================================================================
+===================================================================
+

@@ -1,0 +1,29 @@
+Hasil evaluasi TF-IDF terhadap 30 queries
+RBP score = 0.6473394870896576
+DCG score = 6.018587721420783
+AP score  = 0.49627488480065435
+-----------------------------------------------------------------
+Hasil evaluasi ATN TF-IDF terhadap 30 queries
+RBP score = 0.6116154269312379
+DCG score = 5.88196637463795
+AP score  = 0.46897640979338245
+-----------------------------------------------------------------
+Hasil evaluasi NTN TF-IDF terhadap 30 queries
+RBP score = 0.6223718772153822
+DCG score = 5.897212215963749
+AP score  = 0.45717889549671403
+-----------------------------------------------------------------
+Hasil evaluasi BTN TF Prob IDF terhadap 30 queries
+RBP score = 0.6023555524891635
+DCG score = 5.869291416529311
+AP score  = 0.46813044438022344
+-----------------------------------------------------------------
+Hasil evaluasi BM25 dengan k1=1.3 dan b=0.75 terhadap 30 queries
+RBP score = 0.6334401393363062
+DCG score = 5.972515916468731
+AP score  = 0.4882878604699868
+-----------------------------------------------------------------
+Hasil evaluasi LETOR terhadap 30 queries
+RBP score = 0.24480964967781188
+DCG score = 4.222419294102816
+AP score  = 0.17022681864236852

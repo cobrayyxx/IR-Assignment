@@ -1,0 +1,39 @@
+Query  :  alkylated with radioactive iodoacetate
+Results:
+===========TF-IDF ltn==============
+collection\6\507.txt           8.415
+collection\6\554.txt           3.202
+collection\11\1003.txt         3.138
+collection\6\506.txt           2.713
+collection\4\387.txt           2.563
+collection\4\388.txt           2.563
+collection\10\989.txt          2.412
+collection\5\482.txt           2.412
+collection\11\1018.txt         2.258
+collection\2\119.txt           2.258
+Query  :  psychodrama for disturbed children
+Results:
+===========TF-IDF ltn==============
+collection\9\820.txt           6.871
+collection\10\918.txt          3.787
+collection\9\821.txt           3.784
+collection\1\36.txt            3.491
+collection\9\817.txt           3.462
+collection\10\926.txt          3.292
+collection\8\799.txt           3.292
+collection\10\927.txt          3.242
+collection\1\99.txt            3.075
+collection\2\100.txt           3.075
+Query  :  lipid metabolism in toxemia and normal pregnancy
+Results:
+===========TF-IDF ltn==============
+collection\1\7.txt             9.852
+collection\4\328.txt           6.855
+collection\4\306.txt           5.604
+collection\2\159.txt           5.328
+collection\1\81.txt            5.115
+collection\4\329.txt           4.934
+collection\1\12.txt            3.835
+collection\3\288.txt           3.732
+collection\9\881.txt           3.578
+collection\7\602.txt           3.500

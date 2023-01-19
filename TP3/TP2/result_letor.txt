@@ -1,0 +1,199 @@
+Dari hasil yang didapatkan di bawah, bisa dikatakan bahwa score yang dihasilkan oleh letor justru 
+jauh lebih kecil jika dibandingkan dengan TF-IDF atau BM25. Hal ini juga berakibat pada metric score
+yang nilainya akan menjadi jauh lebih kecil. Mungkin hal ini terjadi karena pendekatan LETOR
+tidak memedulikan skor tapi dia lebih memedulikan urutan rank. Selain itu, faktor dari training dataset atau
+parameter yang tidak dituning dengan baik juga bisa menjadi faktor penyebab rank dan metric dari LETOR kecil.
+Kemudian, kebanyakan hasil dari urutan rank yang dihasilkan oleh LETOR berbeda dengan TF-IDF atau BM25. Hal ini karena
+memang LETOR berguna untuk melakukan re-rank dengan machine learning terhadap hasil TF-IDF atau BM25 agar
+urutan result yang didapat menjadi lebih sesuai dengan kebutuhan user. Selain itu, menggunakan LETOR untuk 
+melakukan re-rank memakan waktu yang cukup lama dibandingkan dengan TF-IDF.
+
+Query  :  alkylated with radioactive iodoacetate
+Results:
+===========TF-IDF ltn==============
+collection\6\507.txt           8.415
+collection\6\554.txt           3.202
+collection\11\1003.txt         3.138
+collection\6\506.txt           2.713
+collection\4\387.txt           2.563
+collection\4\388.txt           2.563
+collection\10\989.txt          2.412
+collection\5\482.txt           2.412
+collection\11\1018.txt         2.258
+collection\2\119.txt           2.258
+
+
+query        : alkylated with radioactive iodoacetate
+SERP/Ranking :
+=========================LETOR==========================
+collection\6\507.txt           1.063
+collection\2\119.txt           0.897
+collection\11\1003.txt         0.522
+collection\6\554.txt           0.268
+collection\10\989.txt          -0.045
+collection\4\388.txt           -0.100
+collection\6\506.txt           -0.234
+collection\11\1018.txt         -0.348
+collection\4\387.txt           -0.846
+collection\5\482.txt           -1.037
+
+
+
+Query  :  psychodrama for disturbed children
+Results:
+===========TF-IDF ltn==============
+collection\9\820.txt           6.871
+collection\10\918.txt          3.787
+collection\9\821.txt           3.784
+collection\1\36.txt            3.491
+collection\9\817.txt           3.462
+collection\10\926.txt          3.292
+collection\8\799.txt           3.292
+collection\10\927.txt          3.242
+collection\1\99.txt            3.075
+collection\2\100.txt           3.075
+
+
+query        : psychodrama for disturbed children
+SERP/Ranking :
+=========================LETOR==========================
+collection\9\820.txt           1.374
+collection\1\36.txt            1.167
+collection\9\821.txt           0.991
+collection\10\918.txt          0.545
+collection\10\926.txt          0.530
+collection\1\99.txt            0.452
+collection\8\799.txt           0.369
+collection\9\817.txt           0.312
+collection\2\100.txt           -0.000
+collection\10\927.txt          -0.054
+
+
+
+Query  :  lipid metabolism in toxemia and normal pregnancy
+Results:
+===========TF-IDF ltn==============
+collection\1\7.txt             9.852
+collection\4\328.txt           6.855
+collection\4\306.txt           5.604
+collection\2\159.txt           5.328
+collection\1\81.txt            5.115
+collection\4\329.txt           4.934
+collection\1\12.txt            3.835
+collection\3\288.txt           3.732
+collection\9\881.txt           3.578
+collection\7\602.txt           3.500
+
+
+query        : lipid metabolism in toxemia and normal pregnancy
+SERP/Ranking :
+=========================LETOR==========================
+collection\1\7.txt             1.356
+collection\7\602.txt           1.327
+collection\1\81.txt            1.136
+collection\2\159.txt           1.074
+collection\4\328.txt           0.989
+collection\3\288.txt           0.841
+collection\1\12.txt            0.814
+collection\4\329.txt           0.662
+collection\4\306.txt           0.589
+collection\9\881.txt           0.113
+
+
+
+===================================================================
+===================================================================
+===================================================================
+
+Query  :  alkylated with radioactive iodoacetate
+Results:
+=========================BM25==========================
+collection\6\507.txt           10.588
+collection\11\1003.txt         4.298
+collection\6\512.txt           4.067
+collection\4\387.txt           3.763
+collection\6\506.txt           3.650
+collection\6\554.txt           3.516
+collection\4\388.txt           3.429
+collection\2\119.txt           3.272
+collection\10\989.txt          3.245
+collection\5\482.txt           3.039
+
+
+query        : alkylated with radioactive iodoacetate
+SERP/Ranking :
+=========================LETOR==========================
+collection\7\602.txt           0.289
+collection\1\7.txt             -0.102
+collection\4\328.txt           -0.458
+collection\4\329.txt           -0.716
+collection\2\159.txt           -1.044
+collection\9\881.txt           -1.046
+collection\3\288.txt           -1.082
+collection\4\306.txt           -1.113
+collection\1\12.txt            -1.137
+collection\1\81.txt            -1.182
+
+
+
+Query  :  psychodrama for disturbed children
+Results:
+=========================BM25==========================
+collection\9\820.txt           8.126
+collection\10\918.txt          4.971
+collection\3\204.txt           4.883
+collection\9\821.txt           4.853
+collection\8\799.txt           4.844
+collection\1\36.txt            4.688
+collection\2\100.txt           4.298
+collection\9\817.txt           4.113
+collection\1\99.txt            4.011
+collection\3\205.txt           3.957
+
+
+query        : psychodrama for disturbed children
+SERP/Ranking :
+=========================LETOR==========================
+collection\7\602.txt           0.058
+collection\1\7.txt             -0.100
+collection\3\288.txt           -0.930
+collection\1\12.txt            -0.978
+collection\4\306.txt           -1.002
+collection\4\329.txt           -1.078
+collection\4\328.txt           -1.078
+collection\1\81.txt            -1.096
+collection\9\881.txt           -1.166
+collection\2\159.txt           -1.275
+
+
+
+Query  :  lipid metabolism in toxemia and normal pregnancy
+Results:
+=========================BM25==========================
+collection\1\7.txt             13.475
+collection\4\328.txt           9.000
+collection\4\306.txt           8.255
+collection\2\159.txt           7.607
+collection\4\329.txt           5.667
+collection\1\81.txt            5.653
+collection\3\288.txt           5.367
+collection\1\12.txt            5.198
+collection\4\371.txt           4.703
+collection\3\201.txt           4.646
+
+
+query        : lipid metabolism in toxemia and normal pregnancy
+SERP/Ranking :
+=========================LETOR==========================
+collection\1\7.txt             1.614
+collection\7\602.txt           1.333
+collection\1\81.txt            1.014
+collection\1\12.txt            0.988
+collection\4\328.txt           0.877
+collection\4\306.txt           0.779
+collection\2\159.txt           0.726
+collection\4\329.txt           0.686
+collection\3\288.txt           0.677
+collection\9\881.txt           0.331
+
+
